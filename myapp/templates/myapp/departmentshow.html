@@ -1,0 +1,20 @@
+{% if list %}
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    {% for d in list %}
+    <tr>
+        <td>{{ d.name }}</td>
+        <td>
+            <a href="/myapp/department/edit/{{ d.id }}">Department Edit</a>
+        </td>
+        <td>
+            <a href="/myapp/department/delete/{{ d.id }}">Department Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>there no record yet</h2>
+{% endif %}

@@ -1,0 +1,10 @@
+<form method="post" action="/myapp/employee/create">
+    {% csrf_token %}
+    <label>Name</label>
+    <div>{{ employee.name }}</div>
+    <label>Department</label>
+    <div>{{ employee.department }}</div>
+    <input type="submit">
+
+
+</form>
